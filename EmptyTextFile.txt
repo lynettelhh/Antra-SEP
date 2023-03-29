@@ -1,0 +1,65 @@
+﻿oncept Questions:
+
+1. What type would you choose for the following “numbers”?
+
+A person’s telephone number     Integer or String
+
+A person’s height               Float
+
+A person’s age                  Integer
+
+A person’s gender               String
+
+A person’s salary               Float
+
+A book’s ISBN                   String
+
+A book’s price                  Float
+
+A book’s shipping weight        Float
+
+A country’s population          Integer
+
+The number of stars in the universe        Float
+
+The number of employees in each of the small or medium businesses in the
+United Kingdom (up to about 50,000 employees per business)     Integer
+
+2. What are the difference between value type and reference type variables?
+Value Type directly hold the value and cannot accept null value but Reference type hold the memory
+Address for the value and are initialized to null. Value Types use Struct or Enum to create
+Reference Types use class, interface, or array to create. 
+
+3. What happens when you divide an int variable by 0?
+Will result in a runtime exception of type "System.DivideByZeroException".
+This is because dividing any number by zero is undefined and cannot be computed.
+
+4. What happens when you divide a double variable by 0?
+will result in a special value called "infinity" or "negative infinity",
+depending on the sign of the dividend. 
+
+5. What happens when you overflow an int variable, that is, set it to a value beyond its
+range?
+The runtime will throw a System.OverflowException.
+Can lead to unexpected or undefined behavior.
+
+6. What is the difference between x = y++; and x = ++y;?
+For x = y++, its a post-increment operator, u is incremented by 1 after the assignment
+x=++y, its a pre-increment operator, y is first incremented by 1 and then the new value
+y is assigned to x.
+
+
+7. What is the difference between break, continue, and return when used inside a loop
+statement?
+When the break keyword is encountered inside a loop, the loop is immediately terminated,
+and the program execution continues with the next statement after the loop.
+
+When the continue keyword is encountered inside a loop, the current iteration is immediately terminated,
+and the program execution continues with the next iteration of the loop.
+
+When the return keyword is encountered inside a loop, the loop is immediately terminated,
+and the function that contains the loop is exited
+
+8. What are the three parts of a for statement and which of them are required?
+Initialization, Condition, Iteration,
+Condition part is required, other two parts are optional.
