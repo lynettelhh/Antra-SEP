@@ -1,10 +1,41 @@
-﻿namespace LeetCodeQuestions;
+﻿using System;
+using System.Collections.Generic;
+
+namespace LeetCodeQuestions;
 class Program
 {
     static void Main(string[] args)
     {
-       //Q1 two sum
+        //Q15 3SUM
         public class Solution
+    {
+        public IList<IList<int>> ThreeSum(int[] nums)
+        {
+            Array.Sort(nums);
+            var dict = new Dictionary<int, int>();
+            for (int i = nums.Length - 1; i >= 0; i--)
+                if (!dict.ContainsKey(nums[i]))
+                    dict[nums[i]] = i;
+
+            var result = new List<IList<int>>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (i > 0 && nums[i] == nums[i - 1])
+                    continue;
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (j > i + 1 && nums[j] == nums[j - 1])
+                        continue;
+                    if (dict.TryGetValue(-nums[i] - nums[j], out int k) && k > j)
+                        result.Add(new List<int>() { nums[i], nums[j], nums[k] });
+                }
+            }
+            return result;
+        }
+    }
+
+    //Q1 two sum
+    public class Solution
     {
         public int[] TwoSum(int[] nums, int target)
         {
