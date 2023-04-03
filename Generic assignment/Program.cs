@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-using System;
-using System.Collections.Generic;
+﻿
 
 
 /*Create a custom Stack class MyStack<T> that can be used with any data type which
